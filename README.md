@@ -1,6 +1,27 @@
 # bazacon
 バザーコンテスト投票のデジタル化
 
+## インストール
+1. PHPとMySQLが入ったサーバを立てる
+2. MySQLで以下のような操作をする
+```bash
+$ mysql -u root
+```
+```SQL
+-- データベースbazaconを作成
+CREATE DATABASE bazacon;
+-- ユーザnobodyをパスワード「パスワード」で作成（※パスワードは適当に変えてください）
+CREATE USER nobody@localhost IDENTIFIED BY 'パスワード';
+-- nobodyにbazaconの全権限を渡す
+GRANT ALL ON bazacon.* TO nobody@localhost IDENTIFIED BY 'パスワード';
+```
+3. init.sqlを読み込む
+```bash
+$ mysql bazacon -u root < init.sql
+```
+4. vote.php, vote_confirm.php, vote_decide.phpの中の$DB_PASSを2.で設定したパスワードにする
+5. 同ファイル群の中の$keyを適当なキーに設定する
+
 ## 背景画像について
 - images/rikujo-udon.jpg
 - images/basukedanshi-nagetto.jpg
