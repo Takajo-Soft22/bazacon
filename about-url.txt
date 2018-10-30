@@ -13,7 +13,6 @@ kendo-friedpotato
 acheri-takikomigohan
 bijutu-fakefruitsandhaborium
 engei-soupanddriflower
-dentobunka-ikebana
 bika-yakiimo
 me2-popcorn
 ie2-frenchtoast
@@ -23,7 +22,6 @@ ca3-watagashi
 me4-churosu
 ie4-agepan
 ca4-pancake
-ca5-cafe
 senkoka-curry
 baseball-yakitori
 rikujo-udon
