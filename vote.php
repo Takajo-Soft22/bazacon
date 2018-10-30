@@ -47,7 +47,7 @@ $title = "${seller}の${booth}に投票する | バザコン2018";
 			<form class="col-md-4" action="vote_confirm.php" method="POST">
 				<div class="form-group">
 					<label for="booth">店名</label>
-					<input type="hidden" name="booth" value="<?= $bazzar; ?>">
+					<input type="hidden" name="bazzar" value="<?= $bazzar; ?>">
 					<input type="text" value="<?= "${booth}（${seller}）"; ?>" disabled class="form-control" id="booth">
 				</div>
 				<button type="submit" class="btn btn-primary">投票する</button>
