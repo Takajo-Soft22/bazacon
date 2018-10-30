@@ -15,7 +15,7 @@ $DB_PASS = /* hidden */;
 try {
 	$pdo = new PDO("mysql:dbname=$DB_NAME;host=$DB_HOST;charset=utf8", $DB_USER, $DB_PASS);
 
-	$sql = 'SELECT * FROM bazzar WHERE bazzar_name=?';
+	$sql = 'SELECT * FROM bazzar WHERE name=?';
 	$stmt = $pdo->prepare($sql);
 	$res = $stmt->execute(array($_GET['bazzar']));
 	if($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -49,7 +49,7 @@ $title = "${seller}の${booth}に投票する | バザコン2018";
 					<label for="booth">店名</label>
 					<input type="hidden" name="booth" value="<?= $bazzar; ?>">
 					<input type="text" value="<?= "${booth}（${seller}）"; ?>" disabled class="form-control" id="booth">
-				</div>s
+				</div>
 				<button type="submit" class="btn btn-primary">投票する</button>
 				<small id="submitHelp" class="form-text text-muted">2度目以降の投票は投票先の変更になります</small>
 			</form>
