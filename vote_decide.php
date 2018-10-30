@@ -53,9 +53,9 @@ function getRow($table, $key_name, $key) {
 	return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-$vote_quality = $_POST['quality'] === 'yes';
-$vote_ambience = $_POST['ambience'] === 'yes';
-$vote_pr = $_POST['pr'] === 'yes';
+$vote_quality = isset($_POST['quality']);
+$vote_ambience = isset($_POST['ambience']);
+$vote_pr = isset($_POST['pr']);
 
 $keys = array();
 if($vote_quality) array_push($keys, 'quality');
