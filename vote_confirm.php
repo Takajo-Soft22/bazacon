@@ -1,8 +1,4 @@
 <?php
-function debug($info) {
-	file_put_contents('php://stderr', $info . "\n");
-}
-
 # validation
 if(!isset($_POST['bazzar'])) {
 	die('No bazzar specified');
@@ -26,8 +22,6 @@ function id_reset() {
 	global $_id;
 	setcookie('id', $_id, 1541343600);
 }
-
-
 
 $pdo = null;
 try {
@@ -81,15 +75,15 @@ if(isset($_COOKIE['id'])) {
 
 $quality_text = $ambience_text = $pr_text = null;
 if(!empty($vote)) {
-	if(!empty($_vote['quality'])) {
+	if(!empty($vote['quality'])) {
 		$row = getRow('bazzar', 'name', $vote['quality']);
 		$quality_text = "現在、この部門は${row['booth']}（${row['seller']}）に投票しています。";
 	}
-	if(!empty($_vote['ambience'])) {
+	if(!empty($vote['ambience'])) {
 		$row = getRow('bazzar', 'name', $vote['ambience']);
 		$ambience_text = "現在、この部門は${row['booth']}（${row['seller']}）に投票しています。";
 	}
-	if(!empty($_vote['pr'])) {
+	if(!empty($vote['pr'])) {
 		$row = getRow('bazzar', 'name', $vote['pr']);
 		$pr_text = "現在、この部門は${row['booth']}（${row['seller']}）に投票しています。";
 	}
