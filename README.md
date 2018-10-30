@@ -1,0 +1,31 @@
+# bazacon
+バザーコンテスト投票のデジタル化
+
+## 背景画像について
+- images/rikujo-udon.jpg
+- images/basukedanshi-nagetto.jpg
+- images/basukejoshi-tapioka.jpg
+- images/volleyball-yakisoba.jpg
+- images/softtennis-frankfurt.jpg
+- images/takkyu-agetako.jpg
+- images/kendo-friedpotato.jpg
+- images/suiei-cheeseandchocostick.jpg
+- images/baseball-yakitori.jpg
+- images/bado-crape.jpg
+- images/handball-waffuru.jpg
+- images/hardtennis-isobe.jpg
+- images/acheri-takikomigohan.jpg
+- images/bijutu-fakefruitsandhaborium.jpg
+- images/suisogaku-korokke.jpg
+- images/mekatoro-amusement.jpg
+- images/engei-soupanddriflower.jpg
+- images/bika-yakiimo.jpg
+- images/me2-popcorn.jpg
+- images/ie2-frenchtoast.jpg
+- images/ca2-donut.jpg
+- images/ie3-okonomiyaki.jpg
+- images/ca3-watagashi.jpg
+- images/me4-churosu.jpg
+- images/ie4-agepan.jpg
+- images/ca4-pancake.jpg
+- images/senkoka-curry.jpg
