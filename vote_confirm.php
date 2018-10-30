@@ -120,7 +120,7 @@ $token2 = hash_hmac('sha256', $token1, $key);
 			<form class="col-md-4" action="vote_decide.php" method="POST">
 				<input type="hidden" name="token1" value="<?= $token1; ?>">
 				<input type="hidden" name="token2" value="<?= $token2; ?>">
-				<input type="hidden" name="booth" value="<?= $bazzar; ?>">
+				<input type="hidden" name="bazzar" value="<?= $bazzar; ?>">
 				<div class="form-group">
 					<input type="checkbox" name="quality" value="yes" id="quality">
 					<label for="quality" class="panel text-center">
