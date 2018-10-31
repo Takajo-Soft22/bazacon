@@ -1,4 +1,4 @@
-URL: http://tkym-bazacon18.info/vote.php?bazzar=クラス又は部活-バザー名
+URL: http://tkym-bazacon18.info/vote.php?bazaar=クラス又は部活-バザー名
 hardtennis-isobe
 suisogaku-korokke
 softtennis-frankfurt
