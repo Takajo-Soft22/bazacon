@@ -23,6 +23,7 @@ $ mysql bazacon -u root < init.sql
 5. 同ファイル群の中の$keyを適当なキーに設定する
 
 ## 背景画像について
+public_html/images
 - images/rikujo-udon.jpg
 - images/basukedanshi-nagetto.jpg
 - images/basukejoshi-tapioka.jpg
