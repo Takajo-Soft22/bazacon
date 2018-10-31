@@ -99,7 +99,6 @@ $token2 = hash_hmac('sha256', $token1, $key);
 <head>
 	<meta charset="UTF-8">
 	<title><?= "確認 - ${seller} ${booth}に投票する | バザコン2018"; ?></title>
-
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
@@ -115,7 +114,7 @@ $token2 = hash_hmac('sha256', $token1, $key);
 				<input type="hidden" name="bazzar" value="<?= $bazzar; ?>">
 				<div class="form-group row" data-toggle="collapse" data-target="#quality-change" aria-expanded="false" aria-controls="quality-change">
 					<label for="quality" class="panel panel-primary text-center" class="col-xs-6">
-						<input type="checkbox" name="quality" value="yes" id="quality">
+						<input type="checkbox" name="quality" value="yes" id="quality" class="unchecked">
 						<span class="panel-title">quality（味など）</span>
 						<div class="panel-body">
 							<?= $quality_text; ?>
@@ -129,7 +128,7 @@ $token2 = hash_hmac('sha256', $token1, $key);
 				</div>
 				<div class="form-group row" data-toggle="collapse" data-target="#ambience-change" aria-expanded="false" aria-controls="ambience-change">
 					<label for="ambience" class="panel panel-primary text-center" class="col-xs-6">
-						<input type="checkbox" name="ambience" value="yes" id="ambience">
+						<input type="checkbox" name="ambience" value="yes" id="ambience" class="unchecked">
 						<span class="panel-title">ambience（雰囲気）</span>
 						<div class="panel-body">
 							<?= $ambience_text; ?>
@@ -143,7 +142,7 @@ $token2 = hash_hmac('sha256', $token1, $key);
 				</div>
 				<div class="form-group row" data-toggle="collapse" data-target="#pr-change" aria-expanded="false" aria-controls="pr-change">
 					<label for="pr" class="panel panel-primary text-center" class="col-xs-6">
-						<input type="checkbox" name="pr" value="yes" id="pr">
+						<input type="checkbox" name="pr" value="yes" id="pr" class="unchecked">
 						<span class="panel-title">PR（広告）</span>
 						<div class="panel-body">
 							<?= $pr_text; ?>
@@ -166,5 +165,8 @@ $token2 = hash_hmac('sha256', $token1, $key);
 	<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<!-- Bootstrap -->
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script>
+		$('.unchecked').prop('checked', false);
+	</script>
 </body>
 </html>

@@ -27,7 +27,7 @@ try {
 }
 if(!$pdo) die('error');
 
-$title = "${seller}の${booth}に投票する | バザコン2018";
+$title = "${seller} ${booth}に投票する | バザコン2018";
 ?>
 <html lang="ja">
 <head>
@@ -39,18 +39,30 @@ $title = "${seller}の${booth}に投票する | バザコン2018";
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<h2><?= "${booth}（${seller}）に投票する";?></h1>
-			<form class="col-xs-md-4" action="vote_confirm.php" method="POST">
-				<div class="form-group">
+		<h1 class="row text-center"><?= "${seller} ${booth}"; ?></h1>
+		<div class="jumbotron" style="background-image: url(<?= "images/${bazzar}.jpg"; ?>)"></div>
+		<h2 class="row text-center"><?= "${seller} ${booth}に投票する";?></h2>
+		<form action="vote_confirm.php" method="POST">
+			<div class="form-group">
+				<div class="row text-center">
 					<label for="booth">店名</label>
-					<input type="hidden" name="bazzar" value="<?= $bazzar; ?>">
-					<input type="text" value="<?= "${booth}（${seller}）"; ?>" disabled class="form-control" id="booth">
 				</div>
-				<button type="submit" class="btn btn-primary">投票する</button>
+				<input type="hidden" name="bazzar" value="<?= $bazzar; ?>">
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-4">
+						<input type="text" value="<?= "${seller} ${booth}"; ?>" disabled class="form-control" id="booth">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-xs-offset-4">
+					<button type="submit" class="btn btn-primary form-control">投票する</button>
+				</div>
+			</div>
+			<div class="row text-center">
 				<small id="submitHelp" class="form-text text-muted">2度目以降の投票は投票先の変更になります</small>
-			</form>
-		</div>
+			</div>
+		</form>
 	</div>
 	<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

@@ -1,6 +1,6 @@
 <?php
 
-include '../config.php'
+include '../config.php';
 
 $DB = "mysql:dbname=$DB_NAME;host=$DB_HOST;charset=utf8";
 
@@ -121,6 +121,29 @@ $voted = array();
 if($vote_quality) $voted []= 'quality';
 if($vote_ambience) $voted []= 'ambience';
 if($vote_pr) $voted []= 'PR';
-
-echo $booth, '（', $seller, '）を', implode(', ', $voted), 'に投票しました。';
 ?>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>設定完了 | バザコン2018</title>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h2 class="col-xs-12 text-center"><?= "$seller $booth を " . implode(', ', $voted) . 'に投票しました。';?></h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+				<a href="vote.php">
+					<div class="btn btn-primary form-control" onclick="location.replace('vote.php'); return false">戻る</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
