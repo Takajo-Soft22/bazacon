@@ -1,12 +1,10 @@
 <?php
-$DB_HOST = 'localhost';
-$DB_NAME = 'bazacon';
-$DB_USER = 'nobody';
-$DB_PASS = /* hidden */;
+
+include '../config.php'
+
 $DB = "mysql:dbname=$DB_NAME;host=$DB_HOST;charset=utf8";
 
 $ip = $_SERVER['REMOTE_ADDR'];
-$key = /* hidden */;
 $_id = hash_hmac('sha256', $ip, $key);
 
 
