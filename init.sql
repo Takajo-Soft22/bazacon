@@ -16,7 +16,7 @@ INSERT INTO bazzar (name, seller, booth) VALUES
 	('bado-crape', 'バドミントン部', 'クレープ'),
 	('handball-waffuru', 'ハンドボール', 'ワッフル'),
 	('hardtennis-isobe', 'テニス部', 'ちくわの磯部揚げ'),
-	('acheri-takikomigohan', 'アーチェリー部', '炊き込みご飯'),
+	('archery-takikomigohan', 'アーチェリー部', '炊き込みご飯'),
 	('bijutu-fakefruitsandhaborium', '美術部', 'フェイクフルーツ＆ハーバリウム'),
 	('suisogaku-korokke', '吹奏楽部', 'コロッケ'),
 	('mekatoro-amusement', 'メカトロシステム部', 'アミューズメント'),
